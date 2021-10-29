@@ -1,0 +1,56 @@
+{
+  "name": "@publishvue/vue3comps",
+  "version": "1.0.2",
+  "contributors": [
+    "hyperbotauthor <hyperchessbotauthor@gmail.com>"
+  ],
+  "description": "Vue 3 components.",
+  "keywords": [
+    "vue3",
+    "components"
+  ],
+  "main": "dist/index.umd.js",
+  "types": "dist/index.umd.d.ts",
+  "bin": {},
+  "config": {},
+  "files": [
+    "*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hyperbotauthor/vue3comps"
+  },
+  "homepage": "https://github.com/hyperbotauthor/vue3comps#vue3comps",
+  "bugs": {
+    "url": "https://github.com/hyperbotauthor/vue3comps/issues",
+    "email": "hyperchessbotauthor@gmail.com"
+  },
+  "scripts": {
+    "prepare": "",
+    "build": "mv nm node_modules ; del-cli dist ; rollup --config ; mv dist/index.d.ts dist/index.umd.d.ts",
+    "serve": "cd site ; yarn serve",
+    "prettier": "prettier -w src site/src rollup.config.js tsconfig.json",
+    "prep": "mv nm node_modules ; yarn prettier && yarn build",
+    "createsite": "vue create site",
+    "addts": "cd site ; vue add typescript",
+    "bserve": "yarn build && mv node_modules nm && yarn serve",
+    "reset": "git fetch origin main && git reset --hard origin/main",
+    "upd": "cd site ; yarn upgrade-interactive --latest"
+  },
+  "devDependencies": {
+    "@rollup/plugin-buble": "^0.21.3",
+    "@types/jest": "^27.0.2",
+    "@vue/cli": "^4.5.14",
+    "del-cli": "^4.0.1",
+    "node-fetch": "2.6.5",
+    "parse-git-config": "^3.0.0",
+    "prettier": "^2.4.1",
+    "rollup": "^2.58.3",
+    "rollup-plugin-postcss": "^4.0.1",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "rollup-plugin-vue": "^6.0.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.4",
+    "vue": "^3.2.20"
+  }
+}

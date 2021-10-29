@@ -1,0 +1,3 @@
+tasks:
+  - name: Yarn install
+    init: yarn ; cd site ; yarn

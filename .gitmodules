@@ -1,0 +1,4 @@
+[submodule "vue-custom-tooltip"]
+	path = vue-custom-tooltip
+	url = https://github.com/adamdehaven/vue-custom-tooltip
+	branch = next
